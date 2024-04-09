@@ -43,8 +43,6 @@
     "node": "18.x"
   },
   "msw": {
-    "workerDirectory": [
-      "public"
-    ]
+    "workerDirectory": "public"
   }
 }

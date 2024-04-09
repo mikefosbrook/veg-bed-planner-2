@@ -1,32 +1,32 @@
-import type { Metadata } from 'next';
+'use client';
+
 import '../styles/global.scss';
 import Header from '@/components/Header/Header';
 import Logo from '@/components/Logo/Logo';
 import Navigation from '@/components/Navigation/Navigation';
-import { store } from '@/store';
-import { Provider } from 'react-redux';
-
-export const metadata: Metadata = {
-  title: 'Veg Planner App',
-  description: 'A vegetable bed planning app based on the Square Foot Gardening technique',
-};
+import StoreProvider from '@/store/StoreProvider';
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
+if (process.env.NODE_ENV === 'development') {
+  console.log('Mocking API calls');
+  require('@/mocks');
+}
+
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <Provider store={store}>
-      <html lang="en">
-        <body>
+    <html lang="en">
+      <body>
+        <StoreProvider>
           <Header>
             <Logo />
             <Navigation />
           </Header>
           {children}
-        </body>
-      </html>
-    </Provider>
+        </StoreProvider>
+      </body>
+    </html>
   );
 }
