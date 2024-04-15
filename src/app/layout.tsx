@@ -11,7 +11,6 @@ interface MainLayoutProps {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  console.log('Mocking API calls');
   require('@/mocks');
 }
 
@@ -19,13 +18,15 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <StoreProvider>
-          <Header>
-            <Logo />
-            <Navigation />
-          </Header>
-          {children}
-        </StoreProvider>
+        <div id="root">
+          <StoreProvider>
+            <Header>
+              <Logo />
+              <Navigation />
+            </Header>
+            <main className="container">{children}</main>
+          </StoreProvider>
+        </div>
       </body>
     </html>
   );

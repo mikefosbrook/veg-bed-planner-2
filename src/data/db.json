@@ -1,7 +1,7 @@
 {
   "beds": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Bed 1",
       "cellsX": 6,
       "cellsY": 4,
@@ -34,7 +34,7 @@
         {
           "id": 6,
           "name": "Cell 6",
-          "vegetable": ""
+          "vegetable": "beetroot"
         },
         {
           "id": 7,
@@ -64,7 +64,7 @@
         {
           "id": 12,
           "name": "Cell 12",
-          "vegetable": ""
+          "vegetable": "beetroot"
         },
         {
           "id": 13,
@@ -124,12 +124,12 @@
         {
           "id": 24,
           "name": "Cell 24",
-          "vegetable": "onion"
+          "vegetable": "radish"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Bed 2",
       "cellsX": 12,
       "cellsY": 6,
@@ -489,7 +489,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Bed 3",
       "cellsX": 6,
       "cellsY": 6,
@@ -641,6 +641,7 @@
       ]
     },
     {
+      "id": "4",
       "name": "FooBar",
       "cellsX": "12",
       "cellsY": 1,
@@ -696,8 +697,132 @@
           "id": 12,
           "name": "Cell 12"
         }
-      ],
-      "id": 4
+      ]
+    },
+    {
+      "id": "1be7",
+      "name": "test 4x4",
+      "cellsX": 2,
+      "cellsY": 2,
+      "cells": [
+        {
+          "id": 1,
+          "name": "Cell 1"
+        },
+        {
+          "id": 2,
+          "name": "Cell 2"
+        },
+        {
+          "id": 3,
+          "name": "Cell 3"
+        },
+        {
+          "id": 4,
+          "name": "Cell 4"
+        }
+      ]
+    },
+    {
+      "id": "5208",
+      "name": "test 4x4",
+      "cellsX": 1,
+      "cellsY": 1,
+      "cells": [
+        {
+          "id": 1,
+          "name": "Cell 1",
+          "vegetable": "courgette"
+        }
+      ]
+    },
+    {
+      "id": "ec3f",
+      "name": "test 4x4",
+      "cellsX": 4,
+      "cellsY": 4,
+      "cells": [
+        {
+          "id": 1,
+          "name": "Cell 1",
+          "vegetable": "courgette"
+        },
+        {
+          "id": 2,
+          "name": "Cell 2",
+          "vegetable": "kale"
+        },
+        {
+          "id": 3,
+          "name": "Cell 3",
+          "vegetable": "onion"
+        },
+        {
+          "id": 4,
+          "name": "Cell 4",
+          "vegetable": "beetroot"
+        },
+        {
+          "id": 5,
+          "name": "Cell 5",
+          "vegetable": "courgette"
+        },
+        {
+          "id": 6,
+          "name": "Cell 6",
+          "vegetable": "kale"
+        },
+        {
+          "id": 7,
+          "name": "Cell 7",
+          "vegetable": "onion"
+        },
+        {
+          "id": 8,
+          "name": "Cell 8",
+          "vegetable": "beetroot"
+        },
+        {
+          "id": 9,
+          "name": "Cell 9",
+          "vegetable": "courgette"
+        },
+        {
+          "id": 10,
+          "name": "Cell 10",
+          "vegetable": "kale"
+        },
+        {
+          "id": 11,
+          "name": "Cell 11",
+          "vegetable": "onion"
+        },
+        {
+          "id": 12,
+          "name": "Cell 12",
+          "vegetable": "kale"
+        },
+        {
+          "id": 13,
+          "name": "Cell 13",
+          "vegetable": "courgette"
+        },
+        {
+          "id": 14,
+          "name": "Cell 14",
+          "vegetable": "kale"
+        },
+        {
+          "id": 15,
+          "name": "Cell 15",
+          "vegetable": "onion"
+        },
+        {
+          "id": 16,
+          "name": "Cell 16",
+          "vegetable": "kale"
+        }
+      ]
     }
   ]
 }

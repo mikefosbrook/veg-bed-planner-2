@@ -1,8 +1,8 @@
-import { IBed } from '../types';
+import { IBed } from '@/types';
 
 const bedMockData: IBed[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Test Bed 1',
     cellsX: 2,
     cellsY: 2,
@@ -30,7 +30,7 @@ const bedMockData: IBed[] = [
     ],
   },
   {
-    id: 2,
+    id: '2',
     name: 'Test Bed 2',
     cellsX: 4,
     cellsY: 2,

@@ -14,7 +14,103 @@ body {
   min-height: 100vh;
 }
 
-.active {
-  background-color: var(--primary);
-  color: #ffffff;
+main {
+  padding-top: 8em;
+}
+
+h1 {
+  color: #f6891e;
+  font-size: 1.75rem;
+}
+
+.bed-container {
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+}
+.bed {
+  display: inline-grid;
+  border: 5px solid #000000;
+  gap: 1px;
+  margin-bottom: 2em;
+}
+
+.cell {
+  align-items: center;
+  outline: 1px solid #000000;
+  width: 50px;
+  height: 50px;
+  &-selected {
+    background-color: var(--primary-focus);
+  }
+  &:focus {
+    animation: fadeFocus 2s forwards;
+    outline: var(--primary) 2px solid;
+    outline-offset: -2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cell {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cell {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.beds-preview {
+  article {
+    position: relative;
+    padding-right: calc(var(--block-spacing-horizontal) * 5);
+  }
+  &:hover {
+    article {
+      background-color: var(--primary-focus);
+    }
+  }
+  text-decoration: none;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+$vegetables: 'beetroot', 'carrot', 'courgette', 'kale', 'leek', 'lettuce', 'onion', 'pepper', 'potato', 'radish',
+  'tomato';
+
+@each $veg in $vegetables {
+  .icon-#{$veg} {
+    background-image: url('/images/veg-icons/#{$veg}.png');
+    background-size: contain;
+  }
+}
+
+.btn {
+  &-inline {
+    width: auto;
+    &:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+  }
+}
+
+.align-right {
+  position: absolute;
+  top: var(--block-spacing-vertical);
+  right: var(--block-spacing-horizontal);
+}
+
+.collapse-margin {
+  margin-bottom: 0;
+}
+
+.prompt {
+  margin-top: 2rem;
 }

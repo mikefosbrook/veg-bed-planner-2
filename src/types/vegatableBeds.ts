@@ -1,11 +1,11 @@
 export interface ICell {
   id: number;
   name: string;
-  vegetable: string;
+  vegetable?: string;
 }
 
 export interface IBed {
-  id: number;
+  id: string;
   name: string;
   cellsX: number;
   cellsY: number;

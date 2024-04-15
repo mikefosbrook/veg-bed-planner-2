@@ -1,23 +1,42 @@
 'use client';
 import React, { useEffect } from 'react';
-import { useAppSelector, useAppDispatch, useAppStore } from '@/store/hooks';
-import { fetchBeds } from '@/store/bedSlice';
+import { useAppSelector, useAppDispatch } from '@/store/hooks';
+import { deleteBed, fetchBeds } from '@/store/bedSlice';
+import Spinner from '@/components/Spinner/Spinner';
+import BedList from '@/components/BedList/BedList';
+import Link from 'next/link';
 
 export default function HomePage() {
-  const store = useAppStore();
-  const bedData = useAppSelector((state) => state.bed.beds);
   const dispatch = useAppDispatch();
+  const { beds: bedData, fetching, error } = useAppSelector((state) => state.bed);
 
   useEffect(() => {
-    console.log('Use Effect fired');
-    dispatch(fetchBeds());
+    // TO DO fetchBeds occurs before Mock Service Worker intercepts the request
+    if (!bedData) {
+      dispatch(fetchBeds());
+    }
   }, []);
+
+  const handleDeleteBed = (bedId: number) => {
+    dispatch(deleteBed(bedId));
+  };
 
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Home page content</p>
-      <pre>{JSON.stringify(bedData, null, 2)}</pre>
+      {error && <p>Error: {error}</p>}
+      {fetching && <Spinner />}
+      {bedData && (
+        <>
+          <Link href="/add-bed" role="button">
+            Add a new bed
+          </Link>
+          {bedData.length ? (
+            <BedList deleteBed={handleDeleteBed} beds={bedData} />
+          ) : (
+            <p className="prompt">No beds yet. Add one above.</p>
+          )}
+        </>
+      )}
     </div>
   );
 }

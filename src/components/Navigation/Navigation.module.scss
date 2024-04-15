@@ -1,13 +1,4 @@
-.logo {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  padding-top: 10px;
-  a {
-    background-color: transparent;
-  }
-  img {
-    width: 250px;
-  }
+.active {
+  background-color: var(--primary);
+  color: #ffffff;
 }
